@@ -1,0 +1,89 @@
+# ServiceTitan API Configuration
+# Copy this file to .env and replace the example values with your actual ServiceTitan credentials
+
+# ServiceTitan OAuth 2.0 Client Credentials
+# These are provided when you register your application with ServiceTitan
+SERVICE_TITAN_CLIENT_ID=your_client_id_here
+SERVICE_TITAN_CLIENT_SECRET=your_client_secret_here
+
+# ServiceTitan Application Key
+# This is the app key provided by ServiceTitan for your registered application
+SERVICE_TITAN_APP_KEY=your_app_key_here
+
+# ServiceTitan Tenant ID
+# This is your ServiceTitan organization's unique tenant identifier
+SERVICE_TITAN_TENANT_ID=your_tenant_id_here
+
+# Optional: Debug Mode
+# Set to 'true' to enable verbose logging for troubleshooting
+# DEBUG=true
+
+# Optional: Custom API Base URL
+# Override the default ServiceTitan API base URL if needed
+# SERVICE_TITAN_BASE_URL=https://api.servicetitan.io
+
+# Optional: HTTP Timeout Settings
+# Customize HTTP request timeouts (in seconds)
+# HTTP_TIMEOUT=30
+# HTTP_CONNECT_TIMEOUT=10
+
+# Optional: Rate Limiting Configuration
+# Configure rate limiting behavior
+# MAX_REQUESTS_PER_MINUTE=100
+# RATE_LIMIT_BACKOFF_FACTOR=2
+
+# ============================================================================
+# SETUP INSTRUCTIONS
+# ============================================================================
+# 
+# 1. Obtain ServiceTitan API Credentials:
+#    - Log into your ServiceTitan account
+#    - Navigate to Settings > Integrations > API Application Management
+#    - Create a new application or use an existing one
+#    - Note down your Client ID, Client Secret, and App Key
+#    - Your Tenant ID can be found in your ServiceTitan URL or account settings
+#
+# 2. Configure Environment Variables:
+#    - Copy this file: cp env_example.txt .env
+#    - Edit .env with your actual credentials
+#    - Never commit .env to version control
+#
+# 3. Test Your Configuration:
+#    - Run any server to test: python servicetitan_core.py
+#    - Check for authentication errors in the output
+#
+# ============================================================================
+# SECURITY NOTES
+# ============================================================================
+#
+# - Keep your credentials secure and never share them
+# - Use environment-specific .env files for different deployments
+# - Rotate your credentials regularly
+# - Monitor API usage in ServiceTitan's developer portal
+# - Set up IP whitelisting if required by your ServiceTitan configuration
+#
+# ============================================================================
+# TROUBLESHOOTING
+# ============================================================================
+#
+# Common Issues:
+# 
+# 1. "Missing required ServiceTitan environment variables"
+#    - Ensure all four main variables are set (CLIENT_ID, CLIENT_SECRET, APP_KEY, TENANT_ID)
+#    - Check for typos in variable names (they are case-sensitive)
+#
+# 2. "Authentication failed" or "401 Unauthorized"
+#    - Verify your credentials are correct
+#    - Ensure your ServiceTitan app has the necessary API permissions
+#    - Check that your app is active in ServiceTitan
+#
+# 3. "403 Forbidden"
+#    - Your app may not have permission for specific endpoints
+#    - Contact ServiceTitan support to verify your API permissions
+#
+# 4. "Rate limit exceeded" or "429 Too Many Requests"
+#    - You're making too many API requests
+#    - Implement proper rate limiting in your usage
+#    - Consider using bulk/export endpoints for large data operations
+#
+# For more help, see the README.md troubleshooting section 

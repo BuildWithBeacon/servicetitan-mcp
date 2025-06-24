@@ -1,0 +1,127 @@
+{
+  "mcpServers": {
+    "servicetitan-core": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_core.py"],
+      "env": {}
+    },
+    "servicetitan-accounting": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_accounting.py"],
+      "env": {}
+    },
+    "servicetitan-crm": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_crm.py"],
+      "env": {}
+    },
+    "servicetitan-customer-interactions": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_customer_interactions.py"],
+      "env": {}
+    },
+    "servicetitan-dispatch": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_dispatch.py"],
+      "env": {}
+    },
+    "servicetitan-equipment-systems": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_equipment_systems.py"],
+      "env": {}
+    },
+    "servicetitan-forms": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_forms.py"],
+      "env": {}
+    },
+    "servicetitan-inventory": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_inventory.py"],
+      "env": {}
+    },
+    "servicetitan-jbce": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_jbce.py"],
+      "env": {}
+    },
+    "servicetitan-jpm": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_jpm.py"],
+      "env": {}
+    },
+    "servicetitan-marketing": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_marketing.py"],
+      "env": {}
+    },
+    "servicetitan-marketing-ads": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_marketing_ads.py"],
+      "env": {}
+    },
+    "servicetitan-marketing-reputation": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_marketing_reputation.py"],
+      "env": {}
+    },
+    "servicetitan-memberships": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_memberships.py"],
+      "env": {}
+    },
+    "servicetitan-payroll": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_payroll.py"],
+      "env": {}
+    },
+    "servicetitan-pricebook": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_pricebook.py"],
+      "env": {}
+    },
+    "servicetitan-reporting": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_reporting.py"],
+      "env": {}
+    },
+    "servicetitan-sales": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_sales.py"],
+      "env": {}
+    },
+    "servicetitan-scheduling-pro": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_scheduling_pro.py"],
+      "env": {}
+    },
+    "servicetitan-service-agreements": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_service_agreements.py"],
+      "env": {}
+    },
+    "servicetitan-settings": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_settings.py"],
+      "env": {}
+    },
+    "servicetitan-task-management": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_task_management.py"],
+      "env": {}
+    },
+    "servicetitan-telecom": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_telecom.py"],
+      "env": {}
+    },
+    "servicetitan-timesheets": {
+      "command": "python",
+      "args": ["/absolute/path/to/servicetitan-mcp/servicetitan_timesheets.py"],
+      "env": {}
+    }
+  },
+  "globalShortcuts": {
+    "toggle": "Cmd+Option+."
+  }
+} 
