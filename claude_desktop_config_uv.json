@@ -1,0 +1,127 @@
+{
+  "mcpServers": {
+    "servicetitan-core": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_core.py"],
+      "env": {}
+    },
+    "servicetitan-accounting": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_accounting.py"],
+      "env": {}
+    },
+    "servicetitan-crm": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_crm.py"],
+      "env": {}
+    },
+    "servicetitan-customer-interactions": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_customer_interactions.py"],
+      "env": {}
+    },
+    "servicetitan-dispatch": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_dispatch.py"],
+      "env": {}
+    },
+    "servicetitan-equipment-systems": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_equipment_systems.py"],
+      "env": {}
+    },
+    "servicetitan-forms": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_forms.py"],
+      "env": {}
+    },
+    "servicetitan-inventory": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_inventory.py"],
+      "env": {}
+    },
+    "servicetitan-jbce": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_jbce.py"],
+      "env": {}
+    },
+    "servicetitan-jpm": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_jpm.py"],
+      "env": {}
+    },
+    "servicetitan-marketing": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_marketing.py"],
+      "env": {}
+    },
+    "servicetitan-marketing-ads": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_marketing_ads.py"],
+      "env": {}
+    },
+    "servicetitan-marketing-reputation": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_marketing_reputation.py"],
+      "env": {}
+    },
+    "servicetitan-memberships": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_memberships.py"],
+      "env": {}
+    },
+    "servicetitan-payroll": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_payroll.py"],
+      "env": {}
+    },
+    "servicetitan-pricebook": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_pricebook.py"],
+      "env": {}
+    },
+    "servicetitan-reporting": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_reporting.py"],
+      "env": {}
+    },
+    "servicetitan-sales": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_sales.py"],
+      "env": {}
+    },
+    "servicetitan-scheduling-pro": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_scheduling_pro.py"],
+      "env": {}
+    },
+    "servicetitan-service-agreements": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_service_agreements.py"],
+      "env": {}
+    },
+    "servicetitan-settings": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_settings.py"],
+      "env": {}
+    },
+    "servicetitan-task-management": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_task_management.py"],
+      "env": {}
+    },
+    "servicetitan-telecom": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_telecom.py"],
+      "env": {}
+    },
+    "servicetitan-timesheets": {
+      "command": "uv",
+      "args": ["run", "python", "/absolute/path/to/servicetitan-mcp/servicetitan_timesheets.py"],
+      "env": {}
+    }
+  },
+  "globalShortcuts": {
+    "toggle": "Cmd+Option+."
+  }
+} 
