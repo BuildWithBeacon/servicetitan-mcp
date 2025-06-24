@@ -338,13 +338,22 @@ Time tracking and labor management:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/servicetitan-mcp.git
+   git clone https://github.com/buildwithbeacon/servicetitan-mcp.git
    cd servicetitan-mcp
    ```
 
 2. **Install Dependencies**:
+   
+   **Option A: Using pip (traditional)**:
    ```bash
    pip install -r requirements.txt
+   ```
+   
+   **Option B: Using uv (recommended - faster and more reliable)**:
+   ```bash
+   uv sync
+   # or if you don't have a pyproject.toml yet:
+   uv pip install -r requirements.txt
    ```
 
 3. **Environment Configuration**:
@@ -364,11 +373,14 @@ Time tracking and labor management:
 ### 3. Claude Desktop Configuration
 
 1. **Copy the MCP Configuration**:
-   Use the provided `claude_desktop_config.json` template or merge with your existing configuration.
+   Use the provided configuration template or merge with your existing configuration:
+   - `claude_desktop_config.json` - For standard Python execution
+   - `claude_desktop_config_uv.json` - For uv execution (recommended)
 
 2. **Configure Individual Servers**:
    Edit your Claude Desktop configuration file (typically at `~/.claude/claude_desktop_config.json`) to include the servers you need:
 
+   **Option A: Using python directly**:
    ```json
    {
      "mcpServers": {
@@ -378,8 +390,26 @@ Time tracking and labor management:
          "env": {}
        },
        "servicetitan-accounting": {
-         "command": "python",
+         "command": "python", 
          "args": ["/path/to/servicetitan-mcp/servicetitan_accounting.py"],
+         "env": {}
+       }
+     }
+   }
+   ```
+
+   **Option B: Using uv run (recommended)**:
+   ```json
+   {
+     "mcpServers": {
+       "servicetitan-core": {
+         "command": "uv",
+         "args": ["run", "python", "/path/to/servicetitan-mcp/servicetitan_core.py"],
+         "env": {}
+       },
+       "servicetitan-accounting": {
+         "command": "uv",
+         "args": ["run", "python", "/path/to/servicetitan-mcp/servicetitan_accounting.py"], 
          "env": {}
        }
      }
@@ -390,6 +420,7 @@ Time tracking and labor management:
 
 For testing or development, you can run servers individually:
 
+**Using python directly**:
 ```bash
 # Core functionality
 python servicetitan_core.py
@@ -402,6 +433,23 @@ python servicetitan_customer_interactions.py
 
 # Equipment systems
 python servicetitan_equipment_systems.py
+
+# And so on for other servers...
+```
+
+**Using uv run (recommended)**:
+```bash
+# Core functionality
+uv run python servicetitan_core.py
+
+# Accounting operations
+uv run python servicetitan_accounting.py
+
+# Customer interactions
+uv run python servicetitan_customer_interactions.py
+
+# Equipment systems
+uv run python servicetitan_equipment_systems.py
 
 # And so on for other servers...
 ```
@@ -734,26 +782,6 @@ Clear separation of concerns makes updates and debugging simpler.
 ### 💾 **Reduced Context Usage**
 Smaller tool sets use less context window, allowing for more complex conversations.
 
-## Development
-
-### Adding New Endpoints
-1. Choose the appropriate domain server
-2. Add the new tool function following existing patterns
-3. Include proper error handling and documentation
-4. Update this README with new tool information
-
-### Creating New Domain Servers
-1. Copy the structure from existing servers (`servicetitan_core.py` is a good template)
-2. Update the FastMCP instance name
-3. Implement domain-specific tools
-4. Add environment variable handling
-5. Update setup instructions and documentation
-
-### Code Quality Standards
-- **Consistent Error Handling**: Use try/catch with detailed error messages
-- **Type Hints**: Include proper type annotations
-- **Documentation**: Comprehensive docstrings for all functions
-- **Authentication**: Use the standard OAuth pattern from existing servers
 
 ## Troubleshooting
 
@@ -783,59 +811,9 @@ Set environment variable `DEBUG=true` to enable verbose logging:
 ```bash
 export DEBUG=true
 python servicetitan_accounting.py
+# or with uv:
+uv run python servicetitan_accounting.py
 ```
-
-## Future Roadmap
-
-- [x] **Core Server** - Basic ServiceTitan functionality
-- [x] **Pricebook Server** - Complete pricebook management v2 API integration
-- [x] **Inventory Server** - Inventory and supply chain management v2 API integration
-- [x] **Job Project Management Server** - Complete JPM v2 API integration
-- [x] **CRM Server** - Customer Relationship Management v2 API integration
-- [x] **Dispatch Server** - Scheduling, routing, and technician management v2 API integration
-- [x] **Accounting Server** - Financial and accounting operations v2 API integration
-- [x] **Customer Interactions Server** - Technician ratings and customer feedback v2 API integration
-- [x] **Equipment Systems Server** - Installed equipment lifecycle management v2 API integration
-- [x] **Forms Server** - Form and submission management with job attachments v2 API integration
-- [x] **JBCE Server** - Job Booking and Call Entry v2 API integration
-- [x] **Marketing Server** - Campaign and lead management v2 API integration
-- [x] **Marketing Ads Server** - Advertising performance and attribution tracking v2 API integration
-- [x] **Marketing Reputation Server** - Reputation management and review analytics v2 API integration
-- [x] **Memberships Server** - Customer membership program management v2 API integration
-- [x] **Payroll Server** - Comprehensive payroll management v2 API integration
-- [x] **Reporting Server** - Business intelligence and analytics v2 API integration
-- [x] **Sales & Estimates Server** - Complete sales and estimation workflow v2 API integration
-- [x] **Service Agreements Server** - Service contract and agreement management v2 API integration
-- [x] **Scheduling Pro Server** - Advanced scheduling optimization and routing v2 API integration
-- [x] **Settings Server** - System configuration and user management v2 API integration
-- [x] **Task Management Server** - Comprehensive task and workflow management v2 API integration
-- [x] **Telecom Server** - Communication and call management v2 API integration
-- [x] **Timesheets Server** - Time tracking and labor management v2 API integration
-- [ ] **Mobile Server** - Mobile app specific endpoints
-- [ ] **API v3 Migration** - Upgrade to newer API versions as they become available
-- [ ] **Real-time Webhooks** - Event-driven integrations
-- [ ] **Bulk Operations** - Enhanced batch processing capabilities
-
-## Contributing
-
-When adding new functionality:
-1. Determine the correct domain server based on ServiceTitan's API organization
-2. Follow existing naming conventions (`get_`, `create_`, `update_`, `delete_`, `export_`)
-3. Include proper error handling with detailed messages
-4. Add comprehensive docstrings with parameter descriptions
-5. Update relevant documentation in this README
-6. Test with actual ServiceTitan API credentials
-7. Follow the established authentication and HTTP client patterns
-
-### Pull Request Guidelines
-- Include tests for new functionality
-- Update documentation for any new tools
-- Follow the existing code style and patterns
-- Ensure all servers continue to work after changes
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Support
 
